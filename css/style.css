@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     margin: 0 auto;
     max-width: 1000px;
@@ -5,10 +10,12 @@ body {
 }
 
 h1 {
-    font-size: 42px;
+    font-size: 3rem;
+    margin: 1rem;
 }
+
 h2 {
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 button {
@@ -16,9 +23,19 @@ button {
     background-color: blue;
     color: white;
     font-size: 24px;
-    padding: 1rem 2rem;
     border-radius: 10px;
-    margin: 50px;
+    padding: .5rem 1rem
+    
+}
+
+button:hover{
+    cursor: pointer;
+    opacity: .7;
+}
+
+.top-bar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .current-player {
@@ -27,39 +44,45 @@ button {
 }
 
 #player {
-    height: 40px;
-    width: 40px;
+    height: 0;
+    width: 0;
     border-radius: 40px;
     vertical-align: middle;
     background-color: red;
-    border: solid 3px black;
+    border: solid .1rem black;
     margin-left: 10px;
+    padding: 1rem;
 }
 
-.game-board-circle:hover{background-color: #777;}
 
 .game-board {
-    background-color: blue;
+    margin-top: 1rem;
     display: grid;
+    width: auto;
     grid-template-columns: repeat(7,1fr);
 }
 
+
+
+
 .game-board-column {
-    border: solid 3px black;
     display: grid;
+    width: auto;
     grid-template-rows: repeat(6,1fr);
-    gap: 15px;
-    padding: 15px 0;
+    background-color: blue;
     grid-template-areas: 
     " f " " e " " d " " c " " b " " a ";
 }
 
+.game-board-column:hover{opacity: 0.7;}
+
 .game-board-circle {
     background-color: white;
-    width: 120px;
-    height: 120px;
     border-radius: 50%;
     margin: auto;
+    padding: 3rem;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .game-board-circle:nth-child(1) {grid-area: a;}
@@ -68,3 +91,27 @@ button {
 .game-board-circle:nth-child(4) {grid-area: d;}
 .game-board-circle:nth-child(5) {grid-area: e;}
 .game-board-circle:nth-child(6) {grid-area: f;}
+
+@media screen and (max-width: 700px) {
+        html {
+            font-size: 14px;
+        }
+}
+
+@media screen and (max-width: 650px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    html {
+        font-size: 8px;
+    }
+}

@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Connect Four </title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header>
         <h1> Connect Four </h1>
-        <div class="current-player"> 
-            <h2> Current player:</h2>
-            <h2 id="player"> </h2>
-        </div>
-   
+        <section class="top-bar">
+            <aside class="current-player">
+                <h2> Current player:</h2>
+                <h2 id="player"> </h2>
+            </aside>
+            <aside> 
+                <button id="resetBtn"> Reset Game</button> 
+            </aside>
+        </section>
+
+
     </header>
 
     <main class="game-board">
@@ -74,10 +82,9 @@
             <div class="game-board-circle" id="columnSevenRowFive"></div>
             <div class="game-board-circle" id="columnSevenRowSix"></div>
         </article>
-        
-    </main>
 
-    <footer> <button id="resetBtn"> Reset Game</button> </footer>
+    </main>
     <script src="js/script.js"></script>
 </body>
+
 </html>
